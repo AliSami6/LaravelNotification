@@ -15,6 +15,12 @@ $data = [
     'price' => 1250
 ];
  User::find(1)->notify((new Product($data)));*/
+ $collection = collect(['Hello', 'World', null])->map(function ($name) {
+    return strtoupper($name);
+})->reject(function ($name) {
+    return empty($name);
+});
+ dd($collection);
     return view('welcome');
 });
 Route::get('mark-read',function(){
