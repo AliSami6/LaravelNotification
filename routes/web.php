@@ -8,13 +8,13 @@ use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
-
+/*
 $data = [
     'name' => 'Laptop',
     'invoice_no' => 'INV-021',
     'price' => 1250
 ];
- User::find(1)->notify((new Product($data)));
+ User::find(1)->notify((new Product($data)));*/
     return view('welcome');
 });
 Route::get('mark-read',function(){

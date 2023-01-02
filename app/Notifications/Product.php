@@ -37,7 +37,7 @@ class Product extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-
+                 // send your mail message
                 ->subject('Invoice Payment')
                     ->line('One of your invoices has been paid!')
                     ->action('Notification Action', url('/'))

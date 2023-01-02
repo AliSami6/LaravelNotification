@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 
 class OffersNotification extends Notification
 {
-    use Queueable;
+    use Queueable; 
   private $offerData;
     /**
      * Create a new notification instance.
@@ -29,7 +29,7 @@ class OffersNotification extends Notification
      */
     public function via($notifiable)
     {
-         return ['mail','database'];
+         return ['mail','database']; // data will be send from mail , or your database
     }
 
     /**
@@ -41,7 +41,7 @@ class OffersNotification extends Notification
       public function toMail($notifiable)
     {
         return (new MailMessage)
-          
+
                     ->line('One of your invoices has been paid!')
                     ->action('Notification Action', url('/'))
                     ->line('Thank you for using our application!');
@@ -56,7 +56,7 @@ class OffersNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'offer_id' => $this->offerData['offer_id']
+            'offer_id' => $this->offerData['offer_id'] // pass data from controller
         ];
     }
 }
