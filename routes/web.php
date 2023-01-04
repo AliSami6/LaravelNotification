@@ -46,10 +46,10 @@ $data = [
 //$collection = collect([1, 2]);
 
 //$matrix = $collection->crossJoin(['a', 'b'], ['I', 'II']);
+$matrix = Arr::crossJoin([1, 2], ['a', 'b']);
 
-
-$array = Arr::collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
- dd($array);
+//$array = Arr::collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]); // 
+ dd($matrix);
     return view('welcome');
 });
 Route::get('mark-read',function(){
